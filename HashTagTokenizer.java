@@ -55,6 +55,7 @@ public class HashTagTokenizer {
 			return;
 		}
 
+		// #feedback - you should uncomment this, it's needed to be case-insensitive.
 		// hashtag = hashtag.toLowerCase();
 
 		int N = hashtag.length();
@@ -63,6 +64,7 @@ public class HashTagTokenizer {
 			if (existInDictionary(hashtag.substring(0, i), dictionary)) {
 				System.out.println(hashtag.substring(0, i));
 				breakHashTag(hashtag.substring(i), dictionary);
+				// #feedback - you should break the loop here.
 			}
 		}
 	}
